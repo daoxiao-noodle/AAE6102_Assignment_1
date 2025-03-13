@@ -44,8 +44,7 @@ Adapt the tracking loop (DLL) to generate correlation plots and analyze the trac
 </div>
 
 ## Task 3 – Navigation Data Decoding
-Decode the navigation message and extract key parameters, such as ephemeris data, for at least one satellite.
-The corresponding implementation can be found in the `naviDecode.m` file. 
+Decode the navigation message and extract key parameters, such as ephemeris data, for at least one satellite. The corresponding implementation can be found in the `naviDecode.m` file. 
 ### Opensky:
 Ephemeris data for multiple satellites (PRN 3, 4, 16, 22, 26, 27, 31, 32).
 | Parameter      | Description                               | PRN 3            | PRN 4            | PRN 16           | PRN 22           | PRN 26           | PRN 27           | PRN 31           | PRN 32           |
@@ -115,8 +114,7 @@ Using pseudorange measurements from tracking, implement the Weighted Least Squar
 
 $\beta = (H^T W H)^{-1} H^T W y$
 
-The weight matrix W is constructed based on the Carrier-to-Noise Ratio (C/N0) and satellite elevation angles (el).  
-The corresponding implementation can be found in the `tracking_POS_WLS.m` file.
+The weight matrix W is constructed based on the Carrier-to-Noise Ratio (C/N0) and satellite elevation angles (el). The corresponding implementation can be found in the `tracking_POS_WLS.m` file.
 
 ### Plot the user position and velocity. Compare the results with the ground truth.
 #### Opensky:
@@ -153,8 +151,7 @@ The corresponding implementation can be found in the `tracking_POS_WLS.m` file.
 - In conclusion, multipath effects introduce severe distortions in pseudorange measurements, causing inaccuracies in both position and velocity estimation by the WLS solution. The OpenSky dataset benefits from a direct line-of-sight (LOS) to satellites, ensuring stable tracking and precise solutions, while the Urban dataset suffers from significant errors due to reflections and signal obstructions, leading to degraded positioning performance.
 
 ## Task 5 – Kalman Filter-Based Positioning
-Develop an Extended Kalman Filter (EKF) using pseudorange and Doppler measurements to estimate user position and velocity.
-The corresponding implementation can be found in the `tracking_POS_KF.m` file. The results are shown as follows:
+Develop an Extended Kalman Filter (EKF) using pseudorange and Doppler measurements to estimate user position and velocity. The corresponding implementation can be found in the `tracking_POS_KF.m` file. The results are shown as follows:
 ### Opensky:
 #### Position:
 <div align="center">
